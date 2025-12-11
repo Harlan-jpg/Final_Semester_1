@@ -10,6 +10,15 @@ body {
 footer {
   margin-top: auto;   /* pushes the footer to the bottom */
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;   /* pushes the footer to the bottom */
+}
 /* Wishlist Page */
 .wishlist-header {
   display: flex;

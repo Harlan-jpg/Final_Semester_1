@@ -1,0 +1,94 @@
+/* ------------------------------
+   RECIPES PAGE
+------------------------------ */
+
+.recipe-hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.recipe-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recipe-hero-text {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    color: white;
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Recipe Section Container */
+.recipes-container {
+    padding: 3rem 2rem;
+}
+
+/* 3-column grid */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Individual cards */
+.recipe-card {
+    background: #e3e3e3;
+    padding-bottom: 1.2rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #cfcfcf;
+}
+
+/* Title */
+.recipe-card h3 {
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: #333;
+}
+
+/* Description */
+.recipe-card p {
+    text-align: center;
+    padding: 0 1rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .recipes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .recipes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-hero-text {
+        font-size: 1.7rem;
+        bottom: 1.4rem;
+    }
+}

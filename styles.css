@@ -1,15 +1,4 @@
-html, body {
-  height: 100%;
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;   /* pushes the footer to the bottom */
-}
 :root {
   --deep-crimson: #901b22;
   --serif: "Playfair Display", serif;
