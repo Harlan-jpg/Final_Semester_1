@@ -1,0 +1,184 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;   /* pushes the footer to the bottom */
+}
+/* Wishlist Page */
+.wishlist-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin: 3rem 0 1.5rem;
+  font-family: var(--serif);
+}
+
+.wishlist-header h1 {
+  font-size: 2.2rem;
+  color: #2b2b2b;
+}
+
+#addBtn {
+  background: var(--deep-crimson);
+  border: none;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .2s ease, background .2s;
+}
+
+#addBtn:hover {
+  background: #7b161c;
+  transform: scale(1.07);
+}
+
+/* Wishlist Cards Grid */
+#todo-section {
+  padding: 1rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Wishlist Card */
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: .3rem;
+  font-family: var(--serif);
+  color: #111;
+}
+
+.card p {
+  color: #555;
+  font-size: .9rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons in cards */
+.cardBtns {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+}
+
+.ok, .exit {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: .4rem .6rem;
+}
+
+/* Modal Themewise */
+#modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-head h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+}
+
+#new-task-form input,
+#new-task-form textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions button {
+  border-radius: 8px;
+}
+
+.modal-actions .primary {
+  background: var(--deep-crimson);
+  color: white;
+}
+/* --- Form --- */
+#new-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#new-task-form input,
+#new-task-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#new-task-form input:focus,
+#new-task-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+/* --- Buttons --- */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.modal-actions .primary {
+  background: black;
+  color: white;
+  border: none;
+}
+label {
+    display: flex;
+    flex-direction: column;
+}
+/* End */
