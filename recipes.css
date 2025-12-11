@@ -1,7 +1,3 @@
-/* ------------------------------
-   RECIPES PAGE
------------------------------- */
-
 .recipe-hero {
     position: relative;
     width: 100%;
@@ -27,12 +23,12 @@
     text-shadow: 0px 2px 6px rgba(0,0,0,0.5);
 }
 
-/* Recipe Section Container */
+
 .recipes-container {
     padding: 3rem 2rem;
 }
 
-/* 3-column grid */
+
 .recipes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -40,7 +36,7 @@
     margin-bottom: 3rem;
 }
 
-/* Individual cards */
+
 .recipe-card {
     background: #e3e3e3;
     padding-bottom: 1.2rem;
@@ -55,7 +51,6 @@
     background: #cfcfcf;
 }
 
-/* Title */
 .recipe-card h3 {
     text-align: center;
     margin-top: 0.8rem;
@@ -66,7 +61,7 @@
     color: #333;
 }
 
-/* Description */
+
 .recipe-card p {
     text-align: center;
     padding: 0 1rem;

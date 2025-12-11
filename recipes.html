@@ -42,7 +42,7 @@ function formatTime(obj) {
     // Loop through keys and format
     for (let key in obj) {
         if (obj[key] < 10) {
-            obj[key] = "0" + obj[key]; // leading zero
+            obj[key] = "0" + obj[key]; 
         }
     }
     return obj;
@@ -54,7 +54,7 @@ function updateTimer() {
 
     const timerEl = document.getElementById("christmas-timer");
 
-    // Conditional for special message
+    
     if (time.days == "00" && time.hours == "00" && time.minutes == "00" && time.seconds == "00") {
         timerEl.textContent = "🎁 Merry Christmas!";
     } else {
@@ -64,7 +64,7 @@ function updateTimer() {
 }
 
 
-// Run timer immediately and repeat every second
+
 updateTimer();
 setInterval(updateTimer, 1000);
         });
@@ -103,20 +103,23 @@ setInterval(updateTimer, 1000);
 
         <div class="recipe-card">
             <img src="assets/recipe1.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
+            <h3>Ham & Potato Recipe</h3>
+            <p>A warm and comforting seasonal favorite made with simple ingredients and cozy spices — perfect for chilly evenings. <span class="see-more">See More...</span></p>
+
         </div>
 
         <div class="recipe-card">
             <img src="assets/recipe2.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
+            <h3>Pigs Blanket Recipe</h3>
+            <p>Light, festive, and full of holiday flavor, this dish brings classic winter aromas right to your table. <span class="see-more">See More...</span></p>
+
         </div>
 
         <div class="recipe-card">
             <img src="assets/recipe6.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
+            <h3>Cookies Recipe</h3>
+           <p>Soft, sweet, and beautifully fragrant — a recipe that feels like Christmas in every bite. <span class="see-more">see more...</span></p>
+
         </div>
 
     </div>
@@ -126,24 +129,21 @@ setInterval(updateTimer, 1000);
 
         <div class="recipe-card">
             <img src="assets/recipe4.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
-        </div>
+            <h3>Turkey Leg Recipe</h3>
+            <p>A cheerful blend of seasonal fruits and spices that comes together in minutes for a joyful treat. <span class="see-more">see more...</span></p>
 
+        </div>
         <div class="recipe-card">
             <img src="assets/recipe5.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
+            <h3>Steak and Cranberry Recipe</h3>
+            <p>Rich, creamy, and irresistibly festive — a holiday classic that brightens any gathering. <span class="see-more">see more...</span></p>
         </div>
-
         <div class="recipe-card">
             <img src="assets/recipe7.jpeg" alt="">
-            <h3>Recipe Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum.</p>
+            <h3>VeggieTray Recipe</h3>
+            <p>Balanced, warm, and delightfully simple, this recipe captures the heart of holiday cooking. <span class="see-more">see more...</span></p>
         </div>
-
     </div>
-
 </section>
 
 <footer>
@@ -151,7 +151,6 @@ setInterval(updateTimer, 1000);
         <p class="brand">NorthStar <span>Christmas Hub</span></p>
         <p class="small">Harlan Tasci &nbsp;&nbsp;&nbsp; harlan.tasci@fhnw.edu</p>
     </div>
-
     <div class="footer-right">
         <a href="index.html">Home</a>
         <a href="wishlist.html">Wishlist</a>
@@ -159,6 +158,5 @@ setInterval(updateTimer, 1000);
         <a href="recipes.html">Recipes</a>
     </div>
 </footer>
-
 </body>
 </html>
