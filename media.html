@@ -4,50 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media</title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+
         function getTimeUntilChristmas() {
             const now = new Date();
             let year = now.getFullYear();
-            if (now > new Date(`${year}-12-25T00:00:00`)) {
-                year++;
-            }
+            if (now > new Date(`${year}-12-25T00:00:00`)) year++;
             const christmas = new Date(`${year}-12-25T00:00:00`);
             const ms = christmas - now;
-            const seconds = Math.floor(ms / 1000) % 60;
-            const minutes = Math.floor(ms / (1000 * 60)) % 60;
-            const hours   = Math.floor(ms / (1000 * 60 * 60)) % 24;
-            const days    = Math.floor(ms / (1000 * 60 * 60 * 24));
-            return { days, hours, minutes, seconds };
+
+            return {
+                days: Math.floor(ms / (1000 * 60 * 60 * 24)),
+                hours: Math.floor(ms / (1000 * 60 * 60)) % 24,
+                minutes: Math.floor(ms / (1000 * 60)) % 60,
+                seconds: Math.floor(ms / 1000) % 60
+            };
         }
+
         function formatTime(obj) {
-            for (let key in obj) {
-                if (obj[key] < 10) obj[key] = "0" + obj[key];
-            }
+            for (let k in obj) if (obj[k] < 10) obj[k] = "0" + obj[k];
             return obj;
         }
+
         function updateTimer() {
-            let time = getTimeUntilChristmas();
-            time = formatTime(time);
+            let time = formatTime(getTimeUntilChristmas());
+            const el = document.getElementById("m-christmas-timer");
 
-            const timerEl = document.getElementById("christmas-timer");
-
-            if (time.days == "00" && time.hours == "00" && time.minutes == "00" && time.seconds == "00") {
-                timerEl.textContent = "🎁 Merry Christmas!";
-            } else {
-                timerEl.textContent =
-                    `${time.days}d : ${time.hours}h : ${time.minutes}m : ${time.seconds}s`;
-            }
+            if (time.days == "00" && time.hours == "00" && time.minutes == "00" && time.seconds == "00")
+                el.textContent = "🎁 Merry Christmas!";
+            else
+                el.textContent = `${time.days}d : ${time.hours}h : ${time.minutes}m : ${time.seconds}s`;
         }
+
         updateTimer();
         setInterval(updateTimer, 1000);
     });
 </script>
 </head>
+
 <body>
+
 <header class="top-nav">
     <nav class="nav-left">
         <a href="index.html">Home</a>
@@ -58,69 +60,73 @@
     <div class="nav-logo">
         <img src="assets/logo.png" class="logo-img">
     </div>
-    <div id="christmas-timer" class="timer-box"></div>
+    <div id="m-christmas-timer" class="m-timer-box"></div>
 </header>
-<section class="recipe-hero">
-    <img src="assets/media-hero.jpg" alt="Movies Banner">
-    <h1 class="recipe-hero-text">Holiday Classics</h1>
+
+<section class="m-hero">
+    <img src="assets/photo6.jpg" alt="Movies Banner">
+    <h1 class="m-hero-text">Holiday Classics</h1>
 </section>
-<section class="recipes-container">
-    <div class="recipes-grid">
-        <div class="recipe-card">
-            <img src="assets/movie1.jpg" alt="">
+
+<section class="m-container">
+
+    <div class="m-grid">
+        <div class="m-card">
+            <img src="assets/homealone.jpeg" alt="">
             <h3>Home Alone</h3>
-            <p>A cheerful, mischievous adventure about a boy who protects his home with unforgettable holiday charm. <span class="see-more">See More...</span></p>
-        </div>
-        <div class="recipe-card">
-            <img src="assets/movie2.jpg" alt="">
-            <h3>Elf</h3>
-            <p>A joyful and hilarious Christmas journey filled with warmth, laughter, and pure festive spirit. <span class="see-more">See More...</span></p>
+            <p>A cheerful, mischievous adventure... <span class="m-see-more">See More...</span></p>
         </div>
 
-        <div class="recipe-card">
-            <img src="assets/movie3.jpg" alt="">
+        <div class="m-card">
+            <img src="assets/elf.jpeg" alt="">
+            <h3>Elf</h3>
+            <p>A joyful and hilarious Christmas journey... <span class="m-see-more">See More...</span></p>
+        </div>
+
+        <div class="m-card">
+            <img src="assets/grinch.jpeg" alt="">
             <h3>The Grinch</h3>
-            <p>A whimsical tale about finding joy, kindness, and the true meaning of the holidays. <span class="see-more">See More...</span></p>
+            <p>A whimsical tale about kindness... <span class="m-see-more">See More...</span></p>
         </div>
     </div>
-    <div class="recipes-grid">
-        <div class="recipe-card">
-            <img src="assets/movie4.jpg" alt="">
+
+    <div class="m-grid">
+        <div class="m-card">
+            <img src="assets/polarexpress.jpeg" alt="">
             <h3>Polar Express</h3>
-            <p>A magical Christmas train ride that reminds us to believe in the wonder of the season. <span class="see-more">See More...</span></p>
+            <p>A magical Christmas train ride... <span class="m-see-more">See More...</span></p>
         </div>
-        <div class="recipe-card">
-            <img src="assets/movie5.jpg" alt="">
+
+        <div class="m-card">
+            <img src="assets/christmaschronicals.jpeg" alt="">
             <h3>Christmas Chronicles</h3>
-            <p>An exciting holiday adventure that brings Santa’s world to life with action and heart. <span class="see-more">See More...</span></p>
+            <p>An exciting holiday adventure... <span class="m-see-more">See More...</span></p>
         </div>
-        <div class="recipe-card">
-            <img src="assets/movie6.jpg" alt="">
+
+        <div class="m-card">
+            <img src="assets/arthurchristmas.jpeg" alt="">
             <h3>Arthur Christmas</h3>
-            <p>A fun and heartfelt story about teamwork, family, and delivering holiday joy. <span class="see-more">See More...</span></p>
+            <p>A fun and heartfelt story... <span class="m-see-more">See More...</span></p>
         </div>
     </div>
 </section>
-<div class="media-section-grid">
 
-    <div class="media-section-card media-section-video-card">
+<div class="m-video-wrapper">
+    <div class="m-video-card">
         <video controls>
             <source src="assets/AI-Video-1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
-
         <h3>AI Research Feature</h3>
-        <p>A short video exploring creative AI concepts and modern holiday-themed generation tools. 
-           <span class="media-section-see-more">See more...</span>
+        <p>A short video exploring creative holiday AI tools. 
+           <span class="m-see-more">See more...</span>
         </p>
     </div>
-
 </div>
 
 <footer>
     <div class="footer-left">
         <p class="brand">NorthStar <span>Christmas Hub</span></p>
-        <p class="small">Harlan Tasci &nbsp;&nbsp;&nbsp; harlan.tasci@fhnw.edu</p>
+        <p class="small">Harlan Tasci — harlan.tasci@fhnw.edu</p>
     </div>
     <div class="footer-right">
         <a href="index.html">Home</a>
@@ -129,5 +135,6 @@
         <a href="recipes.html">Recipes</a>
     </div>
 </footer>
+
 </body>
 </html>
