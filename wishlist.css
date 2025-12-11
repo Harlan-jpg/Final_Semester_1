@@ -8,18 +8,9 @@ body {
 }
 
 footer {
-  margin-top: auto;   /* pushes the footer to the bottom */
+  margin-top: auto;  
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;   /* pushes the footer to the bottom */
-}
-/* Wishlist Page */
 .wishlist-header {
   display: flex;
   justify-content: center;
@@ -55,7 +46,6 @@ footer {
   transform: scale(1.07);
 }
 
-/* Wishlist Cards Grid */
 #todo-section {
   padding: 1rem 2rem 4rem;
   display: grid;
@@ -63,7 +53,6 @@ footer {
   gap: 1.2rem;
 }
 
-/* Wishlist Card */
 .card {
   background: white;
   border-radius: 18px;

@@ -157,7 +157,7 @@ background: #ffffff;
   margin-top: 1rem;
 }
 .feature-content h2 {
-  margin-left: 4rem;
+  
   font-family: var(--serif);
   color: #ffffff;
 }
@@ -238,7 +238,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-right: 0; /* remove desktop offset */
+    margin-right: 0; 
   }
 
   .nav-left a {

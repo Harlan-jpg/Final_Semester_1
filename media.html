@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="recipes.css">
+    <link rel="stylesheet" href="media.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-
         function getTimeUntilChristmas() {
             const now = new Date();
             let year = now.getFullYear();
-
             if (now > new Date(`${year}-12-25T00:00:00`)) {
                 year++;
             }
             const christmas = new Date(`${year}-12-25T00:00:00`);
             const ms = christmas - now;
-
             const seconds = Math.floor(ms / 1000) % 60;
             const minutes = Math.floor(ms / (1000 * 60)) % 60;
             const hours   = Math.floor(ms / (1000 * 60 * 60)) % 24;
             const days    = Math.floor(ms / (1000 * 60 * 60 * 24));
-
             return { days, hours, minutes, seconds };
         }
         function formatTime(obj) {
@@ -105,6 +101,22 @@
         </div>
     </div>
 </section>
+<div class="media-section-grid">
+
+    <div class="media-section-card media-section-video-card">
+        <video controls>
+            <source src="assets/AI-Video-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <h3>AI Research Feature</h3>
+        <p>A short video exploring creative AI concepts and modern holiday-themed generation tools. 
+           <span class="media-section-see-more">See more...</span>
+        </p>
+    </div>
+
+</div>
+
 <footer>
     <div class="footer-left">
         <p class="brand">NorthStar <span>Christmas Hub</span></p>

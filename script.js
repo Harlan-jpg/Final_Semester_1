@@ -15,9 +15,7 @@ class TodoListItem {
         this.createdAt = new Date()
     }
 }
-
 var listItems = []
-
 function updateCards() {
     todoSection.innerHTML = ""
     listItems.forEach((item, index) => {
@@ -37,14 +35,11 @@ function updateCards() {
         }
     })
 }
-
 function closeTheModal(){
     modalBackdrop.setAttribute("hidden", "")
 }
-
 addBtn.onclick = () => modalBackdrop.removeAttribute("hidden")
 closeModal.onclick = cancelModal.onclick = closeTheModal
-
 createModal.onclick = (e) => {
     e.preventDefault()
     listItems.push(new TodoListItem(taskTitle.value, taskDesc.value))
