@@ -125,3 +125,51 @@ border-bottom: 1px solid #e1e1e1;
   background: #ccc;
   margin-top: 1rem;
 }
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #f0f0f0;
+}
+
+.footer-left .brand {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+}
+
+.footer-left .brand span {
+  font-weight: 400;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .feature-row {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+  .footer-right {
+    text-align: left;
+  }
+}
