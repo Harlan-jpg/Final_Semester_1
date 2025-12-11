@@ -131,27 +131,66 @@ background: #ffffff;
   object-fit: cover;
 }
 .feature-content {
-  padding: 1rem;
-  text-align: center;
-}
-.feature-content.right {
-  padding-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
 }
 .feature-content h2 {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  color: white;
+  line-height: 1.2;
   margin: 0;
+}
+
+
+.feature-content .btn {
+  background: var(--deep-crimson);
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: white;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.feature-content .btn:hover {
+  background: #7b161c;
+  transform: translateY(-2px);
+}
+.feature-card .feature-content.right {
+  justify-content: center;
+  align-items: center;
+}
+.feature-card .feature-content.right .btn {
+  margin-top: 1rem;
+}
+.feature-content h2 {
+  margin-left: 4rem;
   font-family: var(--serif);
   color: #ffffff;
 }
-
 .btn {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: .5rem 1.2rem;
-  border: 1px solid #bcbcbc;
-  border-radius: 12px;
+  background: var(--deep-crimson);
+  color: white;
+  padding: 0.5rem 1.1rem;
+  border-radius: 10px;
   text-decoration: none;
-  color: #ffffff;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 2rem;
 }
+
+
+.btn:hover {
+  background: #901b22;
+  
+  
+}
+
+
 .wide-banner img {
   width: 100%;
   height: 37vh;
@@ -196,33 +235,39 @@ footer {
   margin-bottom: 0.3rem;
 }
 
-/* MOBILE */
 @media (max-width: 800px) {
-  .feature-row {
+
+  .top-nav {
     flex-direction: column;
-  }
-  footer {
-    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
-    text-align: left;
+    padding-bottom: 1.2rem;
   }
-  .footer-right {
-    text-align: left;
+
+  .nav-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-right: 0; /* remove desktop offset */
+  }
+
+  .nav-left a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .logo-img {
+    margin: 0 auto;
+  }
+
+  #christmas-timer {
+    justify-content: center;
+    width: 100%;
   }
 }
-.timer-box {
-  color: white;
-  font-weight: 600;
-  font-size: 0.9rem;
-  font-family: var(--sans);
-}
-#christmas-timer {
-  display: flex;
-  justify-content: flex-end;
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-}
-footer {
-  margin-top: auto;   /* pushes the footer to the bottom */
-}
+
+
+ 
+
+
